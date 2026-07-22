@@ -1,0 +1,157 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Prank Show API",
+    "description": "The Prank Show API provides a collection of fresh pranks daily along with a complete archive spanning ten years. It serves as a fun resource for users looking to brighten their mood with humorous content.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/prankshow"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://prank.show/api",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/posts/get": {
+      "get": {
+        "summary": "Get prank post list",
+        "description": "Retrieves a paginated list of prank posts from the archive. The API provides access to fresh pranks daily and a complete archive spanning ten years.",
+        "operationId": "getPrankList",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number for pagination",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "example": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with prank post list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "posts": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier for the prank post"
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "Title of the prank"
+                          },
+                          "content": {
+                            "type": "string",
+                            "description": "Content or description of the prank"
+                          },
+                          "date": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Publication date of the prank"
+                          },
+                          "url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL to the full prank post"
+                          }
+                        }
+                      }
+                    },
+                    "page": {
+                      "type": "integer",
+                      "description": "Current page number"
+                    },
+                    "total_pages": {
+                      "type": "integer",
+                      "description": "Total number of pages available"
+                    },
+                    "total_posts": {
+                      "type": "integer",
+                      "description": "Total number of prank posts"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid page parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Invalid page parameter"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Page not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Page not found"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Posts"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Posts",
+      "description": "Operations related to prank posts"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository and Documentation",
+    "url": "https://github.com/l0v3m0n3y/prankshow"
+  }
+}

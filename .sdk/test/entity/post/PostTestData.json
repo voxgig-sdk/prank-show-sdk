@@ -1,0 +1,37 @@
+{
+  "existing": {
+    "post": {
+      "POST00": {
+        "content": "s32",
+        "date": "s33",
+        "id": "POST00",
+        "title": "s35",
+        "url": "s36"
+      },
+      "POST01": {
+        "content": "s64",
+        "date": "s65",
+        "id": "POST01",
+        "title": "s67",
+        "url": "s68"
+      },
+      "POST02": {
+        "content": "s96",
+        "date": "s97",
+        "id": "POST02",
+        "title": "s99",
+        "url": "s9a"
+      }
+    }
+  },
+  "new": {
+    "post": {
+      "post_ref01": {
+        "content": "sc8",
+        "date": "sc9",
+        "title": "scb",
+        "url": "scc"
+      }
+    }
+  }
+}

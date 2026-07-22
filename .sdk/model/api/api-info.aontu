@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/prankshow"
+      }
+      description: "The Prank Show API provides a collection of fresh pranks daily along with a complete archive spanning ten years. It serves as a fun resource for users looking to brighten their mood with humorous content."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://prank.show/api"
+        }
+      ]
+      summary: "The Prank Show API provides a collection of fresh pranks daily along with a complete archive spanning ten years."
+      title: "Prank Show API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/prankshow"
+    }
+  }
+}
+

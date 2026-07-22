@@ -1,0 +1,81 @@
+# Entity: post
+
+main: kit: entity: post: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "content"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "date"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "id"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "title"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "url"
+      req: false
+      type: "`$STRING`"
+    }
+  ]
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "post"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          args: {
+            query: [
+              {
+                example: 1
+                kind: "query"
+                name: "page"
+                orig: "page"
+                reqd: true
+                type: "`$INTEGER`"
+              }
+            ]
+          }
+          method: "GET"
+          orig: "/posts/get"
+          parts: [
+            "posts"
+            "get"
+          ]
+          select: {
+            "$action": "get"
+            exist: [
+              "page"
+            ]
+          }
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
