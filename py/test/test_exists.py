@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# PrankShow SDK exists test
 
 import pytest
 from prankshow_sdk import PrankShowSDK

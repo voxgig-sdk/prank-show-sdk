@@ -87,6 +87,7 @@ class PrankShowConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/posts/get',
                   'parts' => [
@@ -101,7 +102,7 @@ class PrankShowConfig
                   ],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.posts`',
                   ],
                   'index$' => 0,
                 ],

@@ -35,7 +35,9 @@ const client = new PrankShowSDK()
 
 ### 2. List post records
 
-`list()` resolves to an array of Post objects — iterate it directly:
+`list()` resolves to an array of Post ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const posts = await client.Post().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = PrankShowSDK.test()
 
 const post = await client.Post().list()
-// post is a bare entity populated with mock response data
+// post is the entity, populated with mock response data
+// — call post.data() for the record itself
 console.log(post)
 ```
 

@@ -19,5 +19,11 @@ export interface PostListMatch {
   id?: string
   title?: string
   url?: string
+
+  // Selects a custom action instead of the plain list:
+  //   'get'
+  // The remaining keys are that action's own payload.
+  $action?: string
+  [action: string]: any
 }
 

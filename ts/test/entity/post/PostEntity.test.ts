@@ -26,8 +26,8 @@ import {
 describe('PostEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when PRANKSHOW_TEST_LIVE=TRUE.
-  afterEach(liveDelay('PRANKSHOW_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when PRANK_SHOW_TEST_LIVE=TRUE.
+  afterEach(liveDelay('PRANK_SHOW_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = PrankShowSDK.test()
@@ -63,7 +63,7 @@ describe('PostEntity', async () => {
     const post_ref01_ent = client.Post()
     const post_ref01_match: any = {}
 
-    const post_ref01_list = await post_ref01_ent.list(post_ref01_match)
+    const post_ref01_list = (await post_ref01_ent.list(post_ref01_match)).map((e: any) => e.data())
 
 
   })

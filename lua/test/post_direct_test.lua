@@ -61,11 +61,11 @@ function post_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["PRANKSHOW_TEST_POST_ENTID"] = {},
-    ["PRANKSHOW_TEST_LIVE"] = "FALSE",
+    ["PRANK_SHOW_TEST_POST_ENTID"] = {},
+    ["PRANK_SHOW_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["PRANKSHOW_TEST_LIVE"] == "TRUE"
+  local live = env["PRANK_SHOW_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

@@ -122,6 +122,26 @@ const post = client.Post()
 | `title` | `string` | No |  |
 | `url` | `string` | No |  |
 
+### Actions
+
+This entity exposes custom API actions in addition to the standard
+operations. Select one with `$action` in the call's argument; the
+remaining keys are sent as that action's payload.
+
+| Action | Route | Call |
+| --- | --- | --- |
+| `get` | `/posts/get` | `client.Post().list({ $action: 'get', ... })` |
+
+An action returns that action's OWN response, which is not necessarily a
+Post record — check the API definition for its shape.
+
+```ts
+const result = await client.Post().list({
+  $action: 'get',
+  /* ...the action's own arguments */
+})
+```
+
 ### Operations
 
 #### `list(match: object, ctrl?: object)`

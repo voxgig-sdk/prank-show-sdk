@@ -62,7 +62,7 @@ class PostEntityTest < Minitest::Test
     # The basic flow consumes synthetic IDs from the fixture. In live mode
     # without an *_ENTID env override, those IDs hit the live API and 4xx.
     if setup[:synthetic_only]
-      skip "live entity test uses synthetic IDs from fixture — set PRANKSHOW_TEST_POST_ENTID JSON to run live"
+      skip "live entity test uses synthetic IDs from fixture — set PRANK_SHOW_TEST_POST_ENTID JSON to run live"
       return
     end
     client = setup[:client]
@@ -111,22 +111,22 @@ def post_basic_setup(extra)
   # Detect ENTID env override before envOverride consumes it. When live
   # mode is on without a real override, the basic test runs against synthetic
   # IDs from the fixture and 4xx's. Surface this so the test can skip.
-  entid_env_raw = ENV["PRANKSHOW_TEST_POST_ENTID"]
+  entid_env_raw = ENV["PRANK_SHOW_TEST_POST_ENTID"]
   idmap_overridden = !entid_env_raw.nil? && entid_env_raw.strip.start_with?("{")
 
   env = Runner.env_override({
-    "PRANKSHOW_TEST_POST_ENTID" => idmap,
-    "PRANKSHOW_TEST_LIVE" => "FALSE",
-    "PRANKSHOW_TEST_EXPLAIN" => "FALSE",
+    "PRANK_SHOW_TEST_POST_ENTID" => idmap,
+    "PRANK_SHOW_TEST_LIVE" => "FALSE",
+    "PRANK_SHOW_TEST_EXPLAIN" => "FALSE",
   })
 
   idmap_resolved = Helpers.to_map(
-    env["PRANKSHOW_TEST_POST_ENTID"])
+    env["PRANK_SHOW_TEST_POST_ENTID"])
   if idmap_resolved.nil?
     idmap_resolved = Helpers.to_map(idmap)
   end
 
-  if env["PRANKSHOW_TEST_LIVE"] == "TRUE"
+  if env["PRANK_SHOW_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
       },
@@ -135,13 +135,13 @@ def post_basic_setup(extra)
     client = PrankShowSDK.new(Helpers.to_map(merged_opts))
   end
 
-  live = env["PRANKSHOW_TEST_LIVE"] == "TRUE"
+  live = env["PRANK_SHOW_TEST_LIVE"] == "TRUE"
   {
     client: client,
     data: entity_data,
     idmap: idmap_resolved,
     env: env,
-    explain: env["PRANKSHOW_TEST_EXPLAIN"] == "TRUE",
+    explain: env["PRANK_SHOW_TEST_EXPLAIN"] == "TRUE",
     live: live,
     synthetic_only: live && !idmap_overridden,
     now: (Time.now.to_f * 1000).to_i,

@@ -9,6 +9,7 @@ guide: {
     path: "/posts/get": {
       action: "get": {}
       op: list: method: *GET
+      op: list: transform: res: *("`body.posts`")|top
     }
   }
 

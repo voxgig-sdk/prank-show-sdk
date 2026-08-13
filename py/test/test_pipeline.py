@@ -16,11 +16,11 @@
 import pytest
 
 from prankshow_sdk import PrankShowSDK
-from core.error import PrankShowError
-from core.result import PrankShowResult
-from core.response import PrankShowResponse
-from core.spec import PrankShowSpec
-from feature.base_feature import PrankShowBaseFeature
+from prankshow_sdk.core.error import PrankShowError
+from prankshow_sdk.core.result import PrankShowResult
+from prankshow_sdk.core.response import PrankShowResponse
+from prankshow_sdk.core.spec import PrankShowSpec
+from prankshow_sdk.feature.base_feature import PrankShowBaseFeature
 
 
 def _client():

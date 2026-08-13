@@ -23,8 +23,8 @@ module PrankShowTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("PRANKSHOW_TEST_LIVE")
-    override = getenv("PRANKSHOW_TEST_OVERRIDE")
+    live = getenv("PRANK_SHOW_TEST_LIVE")
+    override = getenv("PRANK_SHOW_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module PrankShowTestRunner
       end
     end
 
-    explain = getenv("PRANKSHOW_TEST_EXPLAIN")
-    m["PRANKSHOW_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("PRANK_SHOW_TEST_EXPLAIN")
+    m["PRANK_SHOW_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

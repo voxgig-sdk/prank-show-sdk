@@ -82,6 +82,7 @@ module PrankShowConfig
                       },
                     ],
                   },
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/posts/get",
                   "parts" => [
@@ -96,7 +97,7 @@ module PrankShowConfig
                   },
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.posts`",
                   },
                   "index$" => 0,
                 },

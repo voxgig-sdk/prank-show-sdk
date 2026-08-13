@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'PrankShow',
   }
 
 
@@ -111,6 +111,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/posts/get",
               "parts": [
@@ -125,7 +126,7 @@ class Config {
               },
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body`"
+                "res": "`body.posts`"
               },
               "index$": 0
             }

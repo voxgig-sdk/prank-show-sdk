@@ -43,8 +43,8 @@ class PrankShowTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('PRANKSHOW_TEST_LIVE');
-        $override = self::getenv('PRANKSHOW_TEST_OVERRIDE');
+        $live = self::getenv('PRANK_SHOW_TEST_LIVE');
+        $override = self::getenv('PRANK_SHOW_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class PrankShowTestRunner
             }
         }
 
-        $explain = self::getenv('PRANKSHOW_TEST_EXPLAIN');
+        $explain = self::getenv('PRANK_SHOW_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['PRANKSHOW_TEST_EXPLAIN'] = $explain;
+            $m['PRANK_SHOW_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

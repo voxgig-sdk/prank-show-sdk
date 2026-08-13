@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from prankshow_sdk.utility.voxgig_struct import voxgig_struct as vs
 from prankshow_sdk import PrankShowSDK
-from core import helpers
+from prankshow_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _post_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "PRANKSHOW_TEST_POST_ENTID": {},
-        "PRANKSHOW_TEST_LIVE": "FALSE",
+        "PRANK_SHOW_TEST_POST_ENTID": {},
+        "PRANK_SHOW_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("PRANKSHOW_TEST_LIVE") == "TRUE"
+    live = env.get("PRANK_SHOW_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
