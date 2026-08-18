@@ -28,7 +28,7 @@ class PrankShowSDK
     utility = PrankShowUtility.new
     @_utility = utility
 
-    config = PrankShowConfig.make_config
+    config = PrankShowConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

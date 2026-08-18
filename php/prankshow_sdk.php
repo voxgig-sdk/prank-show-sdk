@@ -40,7 +40,7 @@ class PrankShowSDK
         $utility = new PrankShowUtility();
         $this->_utility = $utility;
 
-        $config = PrankShowConfig::make_config();
+        $config = PrankShowConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

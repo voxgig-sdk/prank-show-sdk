@@ -15,7 +15,7 @@ require_relative "../PrankShow_sdk"
 module PrankShowFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = PrankShowConfig.make_config["feature"]
+    f = PrankShowConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 
