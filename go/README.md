@@ -6,7 +6,7 @@ The Golang SDK for the PrankShow API — an entity-oriented client using standar
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Post(nil)` — each with the same small set of operations (`List`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -260,11 +260,11 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"content"` |  |
-| `"date"` |  |
-| `"id"` |  |
-| `"title"` |  |
-| `"url"` |  |
+| `"content"` | Content or description of the prank |
+| `"date"` | Publication date of the prank |
+| `"id"` | Unique identifier for the prank post |
+| `"title"` | Title of the prank |
+| `"url"` | URL to the full prank post |
 
 Operations: List.
 
@@ -289,11 +289,11 @@ Create an instance: `post := client.Post(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `string` |  |
-| `date` | `string` |  |
-| `id` | `string` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `content` | `string` | Content or description of the prank |
+| `date` | `string` | Publication date of the prank |
+| `id` | `string` | Unique identifier for the prank post |
+| `title` | `string` | Title of the prank |
+| `url` | `string` | URL to the full prank post |
 
 #### Example: List
 

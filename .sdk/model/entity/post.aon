@@ -8,26 +8,31 @@ main: kit: entity: post: {
     {
       name: "content"
       req: false
+      short: "Content or description of the prank"
       type: "`$STRING`"
     }
     {
       name: "date"
       req: false
+      short: "Publication date of the prank"
       type: "`$STRING`"
     }
     {
       name: "id"
       req: false
+      short: "Unique identifier for the prank post"
       type: "`$STRING`"
     }
     {
       name: "title"
       req: false
+      short: "Title of the prank"
       type: "`$STRING`"
     }
     {
       name: "url"
       req: false
+      short: "URL to the full prank post"
       type: "`$STRING`"
     }
   ]

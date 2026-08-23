@@ -247,11 +247,11 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `date` |  |
-| `id` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the prank |
+| `date` | Publication date of the prank |
+| `id` | Unique identifier for the prank post |
+| `title` | Title of the prank |
+| `url` | URL to the full prank post |
 
 Operations: List.
 
@@ -276,11 +276,11 @@ Create an instance: `$post = $client->Post();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `string` |  |
-| `date` | `string` |  |
-| `id` | `string` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `content` | `string` | Content or description of the prank |
+| `date` | `string` | Publication date of the prank |
+| `id` | `string` | Unique identifier for the prank post |
+| `title` | `string` | Title of the prank |
+| `url` | `string` | URL to the full prank post |
 
 #### Example: List
 

@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -287,11 +287,11 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `date` |  |
-| `id` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the prank |
+| `date` | Publication date of the prank |
+| `id` | Unique identifier for the prank post |
+| `title` | Title of the prank |
+| `url` | URL to the full prank post |
 
 Operations: list.
 
@@ -316,11 +316,11 @@ Create an instance: `const post = client.Post()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `string` |  |
-| `date` | `string` |  |
-| `id` | `string` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `content` | `string` | Content or description of the prank |
+| `date` | `string` | Publication date of the prank |
+| `id` | `string` | Unique identifier for the prank post |
+| `title` | `string` | Title of the prank |
+| `url` | `string` | URL to the full prank post |
 
 #### Example: List
 

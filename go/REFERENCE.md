@@ -98,11 +98,11 @@ fmt.Println(post.GetName()) // "post"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `content` | `string` | No |  |
-| `date` | `string` | No |  |
-| `id` | `string` | No |  |
-| `title` | `string` | No |  |
-| `url` | `string` | No |  |
+| `content` | `string` | No | Content or description of the prank |
+| `date` | `string` | No | Publication date of the prank |
+| `id` | `string` | No | Unique identifier for the prank post |
+| `title` | `string` | No | Title of the prank |
+| `url` | `string` | No | URL to the full prank post |
 
 ### Operations
 

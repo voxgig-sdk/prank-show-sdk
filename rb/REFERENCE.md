@@ -93,11 +93,11 @@ post = client.Post
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `content` | `String` | No |  |
-| `date` | `String` | No |  |
-| `id` | `String` | No |  |
-| `title` | `String` | No |  |
-| `url` | `String` | No |  |
+| `content` | `String` | No | Content or description of the prank |
+| `date` | `String` | No | Publication date of the prank |
+| `id` | `String` | No | Unique identifier for the prank post |
+| `title` | `String` | No | Title of the prank |
+| `url` | `String` | No | URL to the full prank post |
 
 ### Operations
 

@@ -28,6 +28,9 @@ def make_config():
     return {
         "main": {
             "name": "PrankShow",
+            "slug": "prank-show",
+            "version": "0.0.1",
+            "target": "py",
         },
         "feature": {
             "test": {
@@ -50,22 +53,27 @@ def make_config():
         "fields": [
           {
             "name": "content",
+            "short": "Content or description of the prank",
             "type": "`$STRING`",
           },
           {
             "name": "date",
+            "short": "Publication date of the prank",
             "type": "`$STRING`",
           },
           {
             "name": "id",
+            "short": "Unique identifier for the prank post",
             "type": "`$STRING`",
           },
           {
             "name": "title",
+            "short": "Title of the prank",
             "type": "`$STRING`",
           },
           {
             "name": "url",
+            "short": "URL to the full prank post",
             "type": "`$STRING`",
           },
         ],

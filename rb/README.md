@@ -237,11 +237,11 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `date` |  |
-| `id` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the prank |
+| `date` | Publication date of the prank |
+| `id` | Unique identifier for the prank post |
+| `title` | Title of the prank |
+| `url` | URL to the full prank post |
 
 Operations: List.
 
@@ -266,11 +266,11 @@ Create an instance: `post = client.Post`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `String` |  |
-| `date` | `String` |  |
-| `id` | `String` |  |
-| `title` | `String` |  |
-| `url` | `String` |  |
+| `content` | `String` | Content or description of the prank |
+| `date` | `String` | Publication date of the prank |
+| `id` | `String` | Unique identifier for the prank post |
+| `title` | `String` | Title of the prank |
+| `url` | `String` | URL to the full prank post |
 
 #### Example: List
 

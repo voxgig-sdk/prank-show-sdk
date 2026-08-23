@@ -243,11 +243,11 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `content` |  |
-| `date` |  |
-| `id` |  |
-| `title` |  |
-| `url` |  |
+| `content` | Content or description of the prank |
+| `date` | Publication date of the prank |
+| `id` | Unique identifier for the prank post |
+| `title` | Title of the prank |
+| `url` | URL to the full prank post |
 
 Operations: List.
 
@@ -272,11 +272,11 @@ Create an instance: `post = client.Post()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `content` | `str` |  |
-| `date` | `str` |  |
-| `id` | `str` |  |
-| `title` | `str` |  |
-| `url` | `str` |  |
+| `content` | `str` | Content or description of the prank |
+| `date` | `str` | Publication date of the prank |
+| `id` | `str` | Unique identifier for the prank post |
+| `title` | `str` | Title of the prank |
+| `url` | `str` | URL to the full prank post |
 
 #### Example: List
 
