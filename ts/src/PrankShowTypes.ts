@@ -14,11 +14,7 @@ export interface Post {
 }
 
 export interface PostListMatch {
-  content?: string
-  date?: string
-  id?: string
-  title?: string
-  url?: string
+  page: number
 
   // Selects a custom action instead of the plain list:
   //   'get'

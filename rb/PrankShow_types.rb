@@ -35,26 +35,10 @@ Post = Struct.new(
 
 # Request payload for Post#list.
 #
-# @!attribute [rw] content
-#   @return [String, nil]
-#
-# @!attribute [rw] date
-#   @return [String, nil]
-#
-# @!attribute [rw] id
-#   @return [String, nil]
-#
-# @!attribute [rw] title
-#   @return [String, nil]
-#
-# @!attribute [rw] url
-#   @return [String, nil]
+# @!attribute [rw] page
+#   @return [Integer]
 PostListMatch = Struct.new(
-  :content,
-  :date,
-  :id,
-  :title,
-  :url,
+  :page,
   keyword_init: true
 )
 

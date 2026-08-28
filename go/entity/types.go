@@ -23,11 +23,7 @@ type Post struct {
 
 // PostListMatch is the typed request payload for Post.ListTyped.
 type PostListMatch struct {
-	Content *string `json:"content,omitempty"`
-	Date *string `json:"date,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Title *string `json:"title,omitempty"`
-	Url *string `json:"url,omitempty"`
+	Page int `json:"page"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the

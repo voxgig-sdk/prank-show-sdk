@@ -25,10 +25,6 @@ class Post
 /** Request payload for Post#list. */
 class PostListMatch
 {
-    public ?string $content = null;
-    public ?string $date = null;
-    public ?string $id = null;
-    public ?string $title = null;
-    public ?string $url = null;
+    public int $page;
 }
 

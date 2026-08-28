@@ -24,9 +24,5 @@ class Post(TypedDict, total=False):
     url: str
 
 
-class PostListMatch(TypedDict, total=False):
-    content: str
-    date: str
-    id: str
-    title: str
-    url: str
+class PostListMatch(TypedDict):
+    page: int

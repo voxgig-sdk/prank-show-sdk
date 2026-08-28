@@ -14,11 +14,7 @@
 ---@field url? string
 
 ---@class PostListMatch
----@field content? string
----@field date? string
----@field id? string
----@field title? string
----@field url? string
+---@field page number
 
 local M = {}
 
