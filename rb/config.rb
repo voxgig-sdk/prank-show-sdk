@@ -49,6 +49,7 @@ module PrankShowConfig
               "type" => "`$STRING`",
             },
             {
+              "format" => "date-time",
               "name" => "date",
               "short" => "Publication date of the prank",
               "type" => "`$STRING`",
@@ -64,11 +65,16 @@ module PrankShowConfig
               "type" => "`$STRING`",
             },
             {
+              "format" => "uri",
               "name" => "url",
               "short" => "URL to the full prank post",
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "post",
           "op" => {
             "list" => {
@@ -91,9 +97,13 @@ module PrankShowConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/posts/get",
-                  "parts" => [
-                    "posts",
-                    "get",
+                  "segments" => [
+                    {
+                      "lit" => "posts",
+                    },
+                    {
+                      "lit" => "get",
+                    },
                   ],
                   "select" => {
                     "$action" => "get",
@@ -105,6 +115,10 @@ module PrankShowConfig
                     "req" => "`reqdata`",
                     "res" => "`body.posts`",
                   },
+                  "parts" => [
+                    "posts",
+                    "get",
+                  ],
                 },
               ],
             },

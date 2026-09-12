@@ -12,6 +12,7 @@ main: kit: entity: post: {
       type: "`$STRING`"
     }
     {
+      format: "date-time"
       name: "date"
       req: false
       short: "Publication date of the prank"
@@ -30,6 +31,7 @@ main: kit: entity: post: {
       type: "`$STRING`"
     }
     {
+      format: "uri"
       name: "url"
       req: false
       short: "URL to the full prank post"
@@ -62,9 +64,13 @@ main: kit: entity: post: {
           }
           method: "GET"
           orig: "/posts/get"
-          parts: [
-            "posts"
-            "get"
+          segments: [
+            {
+              lit: "posts"
+            }
+            {
+              lit: "get"
+            }
           ]
           select: {
             "$action": "get"
