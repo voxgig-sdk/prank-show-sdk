@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { PrankShowSDK } from '@voxgig-sdk/prank-show'
+import { PrankShowSDK } from '@voxgig-sdk/prank-show-sdk'
 
 const client = new PrankShowSDK()
 ```
@@ -411,7 +411,7 @@ prank-show/
 Import the SDK from the package root:
 
 ```ts
-import { PrankShowSDK } from '@voxgig-sdk/prank-show'
+import { PrankShowSDK } from '@voxgig-sdk/prank-show-sdk'
 ```
 
 ### Entity state

@@ -105,7 +105,7 @@ local results, err = client:Post():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/prank-show` | publish pending — [install from git tag](https://github.com/voxgig-sdk/prank-show-sdk/releases) |
+| TypeScript | `@voxgig-sdk/prank-show-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/prank-show-sdk/releases) |
 | Python | `voxgig-sdk-prank-show` | publish pending — [install from git tag](https://github.com/voxgig-sdk/prank-show-sdk/releases) |
 | PHP | `voxgig-sdk/prank-show` | publish pending — [install from git tag](https://github.com/voxgig-sdk/prank-show-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/prank-show-sdk/go` | `go get github.com/voxgig-sdk/prank-show-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Post():list()
 ### TypeScript
 
 ```ts
-import { PrankShowSDK } from '@voxgig-sdk/prank-show'
+import { PrankShowSDK } from '@voxgig-sdk/prank-show-sdk'
 
 const client = new PrankShowSDK()
 

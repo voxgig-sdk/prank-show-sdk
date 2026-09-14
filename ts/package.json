@@ -1,5 +1,5 @@
 {
-  "name": "@voxgig-sdk/prank-show",
+  "name": "@voxgig-sdk/prank-show-sdk",
   "version": "0.0.1",
   "description": "Unofficial generated TypeScript SDK for the Prank Show public API. Not affiliated with or endorsed by the upstream API provider.",
   "keywords": [
