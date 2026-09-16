@@ -1,12 +1,18 @@
 # PrankShow SDK feature factory
 
 from prankshow_sdk.feature.base_feature import PrankShowBaseFeature
+from prankshow_sdk.feature.ratelimit_feature import PrankShowRatelimitFeature
+from prankshow_sdk.feature.retry_feature import PrankShowRetryFeature
 from prankshow_sdk.feature.test_feature import PrankShowTestFeature
+from prankshow_sdk.feature.timeout_feature import PrankShowTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: PrankShowBaseFeature(),
+    "ratelimit": lambda: PrankShowRatelimitFeature(),
+    "retry": lambda: PrankShowRetryFeature(),
     "test": lambda: PrankShowTestFeature(),
+    "timeout": lambda: PrankShowTimeoutFeature(),
 }
 
 

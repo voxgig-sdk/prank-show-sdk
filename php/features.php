@@ -4,7 +4,10 @@ declare(strict_types=1);
 // PrankShow SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class PrankShowFeatures
@@ -14,8 +17,14 @@ class PrankShowFeatures
         switch ($name) {
             case "base":
                 return new PrankShowBaseFeature();
+            case "ratelimit":
+                return new PrankShowRatelimitFeature();
+            case "retry":
+                return new PrankShowRetryFeature();
             case "test":
                 return new PrankShowTestFeature();
+            case "timeout":
+                return new PrankShowTimeoutFeature();
             default:
                 return new PrankShowBaseFeature();
         }
@@ -31,7 +40,10 @@ class PrankShowFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

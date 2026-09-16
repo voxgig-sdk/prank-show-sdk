@@ -62,6 +62,12 @@ main: kit: entity: post: {
               }
             ]
           }
+          contract: {
+            id: "GET /posts/get"
+            json: "{\"operationId\":\"getPrankList\",\"parameters\":[{\"description\":\"Page number for pagination\",\"in\":\"query\",\"name\":\"page\",\"required\":true,\"schema\":{\"default\":1,\"example\":1,\"minimum\":1,\"type\":\"integer\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"page\":{\"description\":\"Current page number\",\"type\":\"integer\"},\"posts\":{\"items\":{\"properties\":{\"content\":{\"description\":\"Content or description of the prank\",\"type\":\"string\"},\"date\":{\"description\":\"Publication date of the prank\",\"format\":\"date-time\",\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the prank post\",\"type\":\"string\"},\"title\":{\"description\":\"Title of the prank\",\"type\":\"string\"},\"url\":{\"description\":\"URL to the full prank post\",\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"},\"total_pages\":{\"description\":\"Total number of pages available\",\"type\":\"integer\"},\"total_posts\":{\"description\":\"Total number of prank posts\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Successful response with prank post list\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"example\":\"Invalid page parameter\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Bad request - Invalid page parameter\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"example\":\"Page not found\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Page not found\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"example\":\"Internal server error\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/posts/get"
           segments: [
