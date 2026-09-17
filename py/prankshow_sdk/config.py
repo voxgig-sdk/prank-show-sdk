@@ -113,39 +113,7 @@ def make_config():
         },
         "entity": {
       "post": {
-        "fields": [
-          {
-            "name": "content",
-            "short": "Content or description of the prank",
-            "type": "`$STRING`",
-          },
-          {
-            "format": "date-time",
-            "name": "date",
-            "short": "Publication date of the prank",
-            "type": "`$STRING`",
-          },
-          {
-            "name": "id",
-            "short": "Unique identifier for the prank post",
-            "type": "`$STRING`",
-          },
-          {
-            "name": "title",
-            "short": "Title of the prank",
-            "type": "`$STRING`",
-          },
-          {
-            "format": "uri",
-            "name": "url",
-            "short": "URL to the full prank post",
-            "type": "`$STRING`",
-          },
-        ],
-        "id": {
-          "field": "id",
-          "name": "id",
-        },
+        "fields": [],
         "name": "post",
         "op": {
           "list": {

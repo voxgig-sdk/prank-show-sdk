@@ -88,16 +88,6 @@ Prepare a fetch definition without sending the request. Returns the
 $post = $client->Post();
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `content` | `string` | No | Content or description of the prank |
-| `date` | `string` | No | Publication date of the prank |
-| `id` | `string` | No | Unique identifier for the prank post |
-| `title` | `string` | No | Title of the prank |
-| `url` | `string` | No | URL to the full prank post |
-
 ### Operations
 
 #### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`

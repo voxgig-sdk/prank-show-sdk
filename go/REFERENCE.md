@@ -94,16 +94,6 @@ post := client.Post(nil)
 fmt.Println(post.GetName()) // "post"
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `content` | `string` | No | Content or description of the prank |
-| `date` | `string` | No | Publication date of the prank |
-| `id` | `string` | No | Unique identifier for the prank post |
-| `title` | `string` | No | Title of the prank |
-| `url` | `string` | No | URL to the full prank post |
-
 ### Operations
 
 #### `List(reqmatch, ctrl map[string]any) (any, error)`

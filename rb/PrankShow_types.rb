@@ -9,29 +9,8 @@
 # annotations document the shapes. Do not edit by hand.
 
 # Post entity data model.
-#
-# @!attribute [rw] content
-#   @return [String, nil]
-#
-# @!attribute [rw] date
-#   @return [String, nil]
-#
-# @!attribute [rw] id
-#   @return [String, nil]
-#
-# @!attribute [rw] title
-#   @return [String, nil]
-#
-# @!attribute [rw] url
-#   @return [String, nil]
-Post = Struct.new(
-  :content,
-  :date,
-  :id,
-  :title,
-  :url,
-  keyword_init: true
-)
+class Post
+end
 
 # Request payload for Post#list.
 #

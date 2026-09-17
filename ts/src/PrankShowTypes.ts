@@ -6,11 +6,6 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface Post {
-  content?: string
-  date?: string
-  id?: string
-  title?: string
-  url?: string
 }
 
 export interface PostListMatch {

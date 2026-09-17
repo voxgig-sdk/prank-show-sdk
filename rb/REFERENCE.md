@@ -89,16 +89,6 @@ same parameters as `direct()`. Raises on error.
 post = client.Post
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `content` | `String` | No | Content or description of the prank |
-| `date` | `String` | No | Publication date of the prank |
-| `id` | `String` | No | Unique identifier for the prank post |
-| `title` | `String` | No | Title of the prank |
-| `url` | `String` | No | URL to the full prank post |
-
 ### Operations
 
 #### `list(reqmatch = nil, ctrl = nil) -> Array`

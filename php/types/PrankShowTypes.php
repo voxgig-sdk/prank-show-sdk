@@ -15,11 +15,6 @@ declare(strict_types=1);
 /** Post entity data model. */
 class Post
 {
-    public ?string $content = null;
-    public ?string $date = null;
-    public ?string $id = null;
-    public ?string $title = null;
-    public ?string $url = null;
 }
 
 /** Request payload for Post#list. */

@@ -43,7 +43,7 @@ local posts, err = client:Post():list()
 if err then error(err) end
 
 for _, item in ipairs(posts) do
-  print(item["id"], item["content"])
+  print(item)
 end
 ```
 
@@ -231,11 +231,6 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `content` | Content or description of the prank |
-| `date` | Publication date of the prank |
-| `id` | Unique identifier for the prank post |
-| `title` | Title of the prank |
-| `url` | URL to the full prank post |
 
 Operations: List.
 
@@ -255,16 +250,6 @@ Create an instance: `local post = client:Post(nil)`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `content` | `string` | Content or description of the prank |
-| `date` | `string` | Publication date of the prank |
-| `id` | `string` | Unique identifier for the prank post |
-| `title` | `string` | Title of the prank |
-| `url` | `string` | URL to the full prank post |
 
 #### Example: List
 
@@ -415,6 +400,7 @@ Use `helpers.to_map()` to safely validate that a value is a table.
 lua/
 ├── prank-show_sdk.lua    -- Main SDK module
 ├── config.lua               -- Configuration
+├── schema.lua               -- Generated option + entity specs
 ├── features.lua             -- Feature factory
 ├── core/                    -- Core types and context
 ├── entity/                  -- Entity implementations

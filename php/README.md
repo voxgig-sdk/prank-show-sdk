@@ -39,7 +39,7 @@ try {
     $posts = $client->Post()->list();
     foreach ($posts as $record) {
         $item = $record->data_get();
-        echo $item["id"] . " " . $item["content"] . "\n";
+        echo json_encode($item) . "\n";
     }
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
@@ -248,11 +248,6 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `content` | Content or description of the prank |
-| `date` | Publication date of the prank |
-| `id` | Unique identifier for the prank post |
-| `title` | Title of the prank |
-| `url` | URL to the full prank post |
 
 Operations: List.
 
@@ -272,16 +267,6 @@ Create an instance: `$post = $client->Post();`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `content` | `string` | Content or description of the prank |
-| `date` | `string` | Publication date of the prank |
-| `id` | `string` | Unique identifier for the prank post |
-| `title` | `string` | Title of the prank |
-| `url` | `string` | URL to the full prank post |
 
 #### Example: List
 
@@ -433,6 +418,7 @@ Use `Helpers::to_map()` to safely validate that a value is an array.
 php/
 ├── prankshow_sdk.php          -- Main SDK class
 ├── config.php                     -- Configuration
+├── schema.php                     -- Generated option + entity specs
 ├── features.php                   -- Feature factory
 ├── core/                          -- Core types and context
 ├── entity/                        -- Entity implementations

@@ -243,11 +243,6 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `content` | Content or description of the prank |
-| `date` | Publication date of the prank |
-| `id` | Unique identifier for the prank post |
-| `title` | Title of the prank |
-| `url` | URL to the full prank post |
 
 Operations: List.
 
@@ -267,16 +262,6 @@ Create an instance: `post = client.Post()`
 | Method | Description |
 | --- | --- |
 | `list()` | List entities, optionally matching the given criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `content` | `str` | Content or description of the prank |
-| `date` | `str` | Publication date of the prank |
-| `id` | `str` | Unique identifier for the prank post |
-| `title` | `str` | Title of the prank |
-| `url` | `str` | URL to the full prank post |
 
 #### Example: List
 
@@ -427,6 +412,7 @@ Use `helpers.to_map()` to safely validate that a value is a dict.
 py/
 ├── prankshow_sdk.py         -- Main SDK module
 ├── config.py                    -- Configuration
+├── schema.py                    -- Generated option + entity specs
 ├── features.py                  -- Feature factory
 ├── core/                        -- Core types and context
 ├── entity/                      -- Entity implementations

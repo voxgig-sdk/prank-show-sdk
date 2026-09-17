@@ -7,11 +7,6 @@
 -- edit by hand.
 
 ---@class Post
----@field content? string
----@field date? string
----@field id? string
----@field title? string
----@field url? string
 
 ---@class PostListMatch
 ---@field page number

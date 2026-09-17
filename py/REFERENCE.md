@@ -83,16 +83,6 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 post = client.Post()
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `content` | `str` | No | Content or description of the prank |
-| `date` | `str` | No | Publication date of the prank |
-| `id` | `str` | No | Unique identifier for the prank post |
-| `title` | `str` | No | Title of the prank |
-| `url` | `str` | No | URL to the full prank post |
-
 ### Operations
 
 #### `list(reqmatch=None, ctrl=None) -> list`

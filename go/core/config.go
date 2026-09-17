@@ -88,39 +88,7 @@ func MakeConfig() map[string]any {
 		},
 		"entity": map[string]any{
 			"post": map[string]any{
-				"fields": []any{
-					map[string]any{
-						"name": "content",
-						"short": "Content or description of the prank",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"format": "date-time",
-						"name": "date",
-						"short": "Publication date of the prank",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "id",
-						"short": "Unique identifier for the prank post",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "title",
-						"short": "Title of the prank",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"format": "uri",
-						"name": "url",
-						"short": "URL to the full prank post",
-						"type": "`$STRING`",
-					},
-				},
-				"id": map[string]any{
-					"field": "id",
-					"name": "id",
-				},
+				"fields": []any{},
 				"name": "post",
 				"op": map[string]any{
 					"list": map[string]any{

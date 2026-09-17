@@ -14,11 +14,6 @@ import (
 
 // Post is the typed data model for the post entity.
 type Post struct {
-	Content *string `json:"content,omitempty"`
-	Date *string `json:"date,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Title *string `json:"title,omitempty"`
-	Url *string `json:"url,omitempty"`
 }
 
 // PostListMatch is the typed request payload for Post.ListTyped.

@@ -16,12 +16,8 @@ from __future__ import annotations
 from typing import TypedDict, Any
 
 
-class Post(TypedDict, total=False):
-    content: str
-    date: str
-    id: str
-    title: str
-    url: str
+class Post(TypedDict):
+    pass
 
 
 class PostListMatch(TypedDict):

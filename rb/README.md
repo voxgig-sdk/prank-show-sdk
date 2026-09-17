@@ -37,7 +37,7 @@ begin
   # list returns an Array of Post records — iterate directly.
   posts = client.Post.list
   posts.each do |item|
-    puts "#{item["id"]} #{item["content"]}"
+    puts "#{item}"
   end
 rescue => err
   warn "list failed: #{err}"
@@ -237,11 +237,6 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `content` | Content or description of the prank |
-| `date` | Publication date of the prank |
-| `id` | Unique identifier for the prank post |
-| `title` | Title of the prank |
-| `url` | URL to the full prank post |
 
 Operations: List.
 
@@ -261,16 +256,6 @@ Create an instance: `post = client.Post`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `content` | `String` | Content or description of the prank |
-| `date` | `String` | Publication date of the prank |
-| `id` | `String` | Unique identifier for the prank post |
-| `title` | `String` | Title of the prank |
-| `url` | `String` | URL to the full prank post |
 
 #### Example: List
 
@@ -422,6 +407,7 @@ Use `Helpers.to_map()` to safely validate that a value is a hash.
 rb/
 ├── PrankShow_sdk.rb       -- Main SDK module
 ├── config.rb                  -- Configuration
+├── schema.rb                  -- Generated option + entity specs
 ├── features.rb                -- Feature factory
 ├── core/                      -- Core types and context
 ├── entity/                    -- Entity implementations

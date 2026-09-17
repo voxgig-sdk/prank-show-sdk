@@ -260,11 +260,6 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"content"` | Content or description of the prank |
-| `"date"` | Publication date of the prank |
-| `"id"` | Unique identifier for the prank post |
-| `"title"` | Title of the prank |
-| `"url"` | URL to the full prank post |
 
 Operations: List.
 
@@ -284,16 +279,6 @@ Create an instance: `post := client.Post(nil)`
 | Method | Description |
 | --- | --- |
 | `List(match, ctrl)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `content` | `string` | Content or description of the prank |
-| `date` | `string` | Publication date of the prank |
-| `id` | `string` | Unique identifier for the prank post |
-| `title` | `string` | Title of the prank |
-| `url` | `string` | URL to the full prank post |
 
 #### Example: List
 
