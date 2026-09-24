@@ -1,0 +1,60 @@
+# Entity: post
+
+main: kit: entity: post: {
+
+  alias: field: {}
+
+  name: "post"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /posts/get"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/posts/get"
+          q: {
+            "$action": "get"
+            exist: [
+              "page"
+            ]
+          }
+          s: [
+            {
+              lit: "posts"
+            }
+            {
+              lit: "get"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.posts`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

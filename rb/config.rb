@@ -104,18 +104,6 @@ module PrankShowConfig
               "name" => "list",
               "points" => [
                 {
-                  "args" => {
-                    "query" => [
-                      {
-                        "example" => 1,
-                        "kind" => "query",
-                        "name" => "page",
-                        "orig" => "page",
-                        "reqd" => true,
-                        "type" => "`$INTEGER`",
-                      },
-                    ],
-                  },
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/posts/get",
@@ -127,20 +115,33 @@ module PrankShowConfig
                       "lit" => "get",
                     },
                   ],
+                  "parts" => [
+                    "posts",
+                    "get",
+                  ],
+                  "rename" => {},
+                  "transform" => {
+                    "req" => "`reqdata`",
+                    "res" => "`body.posts`",
+                  },
+                  "args" => {
+                    "query" => [
+                      {
+                        "name" => "page",
+                        "orig" => "page",
+                        "type" => "`$INTEGER`",
+                        "kind" => "query",
+                        "reqd" => true,
+                        "example" => 1,
+                      },
+                    ],
+                  },
                   "select" => {
                     "$action" => "get",
                     "exist" => [
                       "page",
                     ],
                   },
-                  "transform" => {
-                    "req" => "`reqdata`",
-                    "res" => "`body.posts`",
-                  },
-                  "parts" => [
-                    "posts",
-                    "get",
-                  ],
                 },
               ],
             },

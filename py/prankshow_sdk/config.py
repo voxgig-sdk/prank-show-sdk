@@ -121,18 +121,6 @@ def make_config():
             "name": "list",
             "points": [
               {
-                "args": {
-                  "query": [
-                    {
-                      "example": 1,
-                      "kind": "query",
-                      "name": "page",
-                      "orig": "page",
-                      "reqd": True,
-                      "type": "`$INTEGER`",
-                    },
-                  ],
-                },
                 "kind": "http",
                 "method": "GET",
                 "orig": "/posts/get",
@@ -144,20 +132,33 @@ def make_config():
                     "lit": "get",
                   },
                 ],
+                "parts": [
+                  "posts",
+                  "get",
+                ],
+                "rename": {},
+                "transform": {
+                  "req": "`reqdata`",
+                  "res": "`body.posts`",
+                },
+                "args": {
+                  "query": [
+                    {
+                      "name": "page",
+                      "orig": "page",
+                      "type": "`$INTEGER`",
+                      "kind": "query",
+                      "reqd": True,
+                      "example": 1,
+                    },
+                  ],
+                },
                 "select": {
                   "$action": "get",
                   "exist": [
                     "page",
                   ],
                 },
-                "transform": {
-                  "req": "`reqdata`",
-                  "res": "`body.posts`",
-                },
-                "parts": [
-                  "posts",
-                  "get",
-                ],
               },
             ],
           },

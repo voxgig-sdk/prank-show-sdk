@@ -96,18 +96,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"query": []any{
-										map[string]any{
-											"example": 1,
-											"kind": "query",
-											"name": "page",
-											"orig": "page",
-											"reqd": true,
-											"type": "`$INTEGER`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/posts/get",
@@ -119,19 +107,32 @@ func MakeConfig() map[string]any {
 										"lit": "get",
 									},
 								},
+								"parts": []any{
+									"posts",
+									"get",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body.posts`",
+								},
+								"args": map[string]any{
+									"query": []any{
+										map[string]any{
+											"name": "page",
+											"orig": "page",
+											"type": "`$INTEGER`",
+											"kind": "query",
+											"reqd": true,
+											"example": 1,
+										},
+									},
+								},
 								"select": map[string]any{
 									"$action": "get",
 									"exist": []any{
 										"page",
 									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body.posts`",
-								},
-								"parts": []any{
-									"posts",
-									"get",
 								},
 							},
 						},

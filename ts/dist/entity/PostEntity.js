@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PostEntity = void 0;
 const PrankShowEntityBase_1 = require("../PrankShowEntityBase");
-// TODO: needs Entity superclass
 class PostEntity extends PrankShowEntityBase_1.PrankShowEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

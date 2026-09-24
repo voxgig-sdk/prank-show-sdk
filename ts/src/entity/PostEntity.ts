@@ -19,7 +19,6 @@ import type {
   PostListMatch,
 } from '../PrankShowTypes'
 
-// TODO: needs Entity superclass
 class PostEntity extends PrankShowEntityBase<Post> {
 
   constructor(client: PrankShowSDK, entopts: any) {
